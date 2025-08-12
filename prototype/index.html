@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sila Union — Домой · Моделирование бизнес‑процессов</title>
+    <link rel="icon" href="assets/logo-sila-union.svg" />
+    <link rel="stylesheet" href="brand.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Пропустить к основному содержимому</a>
+
+    <header class="su-header" role="banner">
+      <div class="su-header__left">
+        <button class="su-icon-btn su-header__menu" aria-label="Открыть навигацию" data-action="toggle-sidebar" aria-expanded="false">☰</button>
+        <a class="su-logo" href="#" aria-label="Домой">
+          <img src="assets/logo-sila-union.svg" alt="Sila Union" />
+        </a>
+        <div class="su-workspace">
+          <button class="su-button su-button--ghost" aria-haspopup="listbox" aria-expanded="false" id="workspaceButton">
+            Workspace: <span id="workspaceName">Маркетинг</span> ▼
+          </button>
+          <ul class="su-menu" role="listbox" aria-labelledby="workspaceButton" hidden id="workspaceMenu">
+            <li role="option" data-workspace="Маркетинг">Маркетинг</li>
+            <li role="option" data-workspace="Разработка">Разработка</li>
+            <li role="option" data-workspace="Операции">Операции</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="su-header__center">
+        <button class="su-commandk" id="openSearch" aria-haspopup="dialog" aria-controls="searchDialog" aria-label="Открыть поиск (Ctrl/⌘K)">
+          <span class="su-kbd">⌘K</span>
+          Быстрый поиск
+        </button>
+      </div>
+
+      <div class="su-header__right">
+        <div class="su-create">
+          <button class="su-button su-button--primary" id="createButton" aria-haspopup="menu" aria-expanded="false">+ Создать</button>
+          <div class="su-menu su-menu--md" role="menu" hidden id="createMenu">
+            <button role="menuitem" data-create="bpmn">Новая BPMN</button>
+            <button role="menuitem" data-create="dmn">Новая DMN</button>
+            <button role="menuitem" data-create="epc">Новая EPC</button>
+            <hr />
+            <button role="menuitem" data-create="template">Из шаблона…</button>
+            <button role="menuitem" data-create="import">Импорт BPMN/XML…</button>
+          </div>
+        </div>
+        <button class="su-icon-btn" aria-label="Уведомления" data-action="notify">🔔<span class="su-badge" aria-label="Есть уведомления">3</span></button>
+        <button class="su-icon-btn" aria-label="Справка (нажмите ?)" data-action="help">?</button>
+        <button class="su-avatar" aria-label="Профиль" data-action="profile">Ю</button>
+      </div>
+    </header>
+
+    <nav class="su-tabs" aria-label="Основная навигация">
+      <button class="su-tab is-active" data-tab="home" aria-selected="true">Домой</button>
+      <button class="su-tab" data-tab="models" aria-selected="false">Модели</button>
+      <button class="su-tab" data-tab="templates" aria-selected="false">Шаблоны</button>
+      <button class="su-tab" data-tab="reports" aria-selected="false">Отчеты</button>
+      <button class="su-tab" data-tab="glossary" aria-selected="false">Глоссарий</button>
+      <button class="su-tab" data-tab="admin" aria-selected="false">Управление</button>
+    </nav>
+
+    <main id="main" class="su-main" tabindex="-1">
+      <section class="su-grid" data-view="home">
+        <aside class="su-col su-col--left">
+          <h2 class="su-section-title">Быстрый старт</h2>
+          <div class="su-actions">
+            <button class="su-action" data-create="bpmn">+ Новая BPMN</button>
+            <button class="su-action" data-create="import">⭳ Импорт BPMN/XML</button>
+            <button class="su-action" data-create="template">↳ Шаблоны</button>
+          </div>
+          <div class="su-tree">
+            <h3 class="su-subtitle">Рабочие пространства</h3>
+            <ul>
+              <li>
+                <button class="su-tree__folder" aria-expanded="true">Маркетинг</button>
+                <ul>
+                  <li><a href="#" class="su-tree__item">Онбординг</a></li>
+                  <li><a href="#" class="su-tree__item">Запуск кампании</a></li>
+                </ul>
+              </li>
+              <li>
+                <button class="su-tree__folder" aria-expanded="false">Разработка</button>
+                <ul hidden>
+                  <li><a href="#" class="su-tree__item">CI/CD</a></li>
+                  <li><a href="#" class="su-tree__item">Релиз</a></li>
+                </ul>
+              </li>
+              <li>
+                <button class="su-tree__folder" aria-expanded="false">Операции</button>
+                <ul hidden>
+                  <li><a href="#" class="su-tree__item">Закупки</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="su-col su-col--center">
+          <div class="su-continue">
+            <div class="su-continue__text">
+              <span class="su-eyebrow">Продолжить</span>
+              <h2 class="su-continue__title">Процесс онбординга сотрудников</h2>
+              <p class="su-muted">Изменено вчера · Черновик · BPMN</p>
+            </div>
+            <button class="su-button su-button--secondary">Открыть</button>
+          </div>
+
+          <div class="su-toolbar">
+            <div class="su-filters">
+              <button class="su-chip is-active" data-filter="all">Все</button>
+              <button class="su-chip" data-filter="mine">Мои</button>
+              <button class="su-chip" data-filter="draft">Черновики</button>
+              <button class="su-chip" data-filter="published">Опубликовано</button>
+              <button class="su-chip" data-filter="errors">С ошибками</button>
+            </div>
+            <div class="su-toolbar__right">
+              <button class="su-button su-button--ghost" id="openFilters" aria-expanded="false">Фильтры (F)</button>
+            </div>
+          </div>
+
+          <div class="su-cards" id="recentCards" aria-live="polite">
+            <!-- Карточки добавляются скриптом -->
+          </div>
+
+          <h2 class="su-section-title">Рекомендованные шаблоны</h2>
+          <div class="su-templates" id="templatesGrid">
+            <!-- Шаблоны добавляются скриптом -->
+          </div>
+        </section>
+
+        <aside class="su-col su-col--right">
+          <section class="su-panel">
+            <h2 class="su-section-title">Мои задачи и согласования</h2>
+            <div class="su-tabsline" role="tablist">
+              <button role="tab" aria-selected="true" class="is-active" data-tasks-tab="assigned">Назначены мне</button>
+              <button role="tab" aria-selected="false" data-tasks-tab="approvals">Я согласую</button>
+              <button role="tab" aria-selected="false" data-tasks-tab="requests">Мои запросы</button>
+            </div>
+            <ul class="su-list" id="tasksList" aria-live="polite"></ul>
+          </section>
+
+          <section class="su-panel">
+            <h2 class="su-section-title">Активность команды</h2>
+            <ul class="su-activity" id="activityList"></ul>
+          </section>
+
+          <section class="su-panel">
+            <h2 class="su-section-title">Качество моделей</h2>
+            <ul class="su-quality" id="qualityList"></ul>
+          </section>
+        </aside>
+      </section>
+
+      <!-- Другие представления вкладок можно добавить аналогично -->
+    </main>
+
+    <footer class="su-footer">
+      <div class="su-container">
+        <span>© 2025 Sila Union</span>
+        <span class="su-muted">Версия 0.1.0</span>
+        <a href="#" class="su-link">Документация</a>
+        <a href="#" class="su-link">Горячие клавиши</a>
+      </div>
+    </footer>
+
+    <!-- Диалог поиска -->
+    <dialog id="searchDialog" class="su-dialog" aria-label="Поиск">
+      <form method="dialog" class="su-search">
+        <input type="text" id="searchInput" placeholder="Поиск по моделям, тегам, участникам…" aria-label="Строка поиска" />
+        <button class="su-button su-button--ghost" value="cancel">Закрыть</button>
+      </form>
+      <div class="su-search__results" id="searchResults" role="listbox" aria-label="Результаты поиска"></div>
+    </dialog>
+
+    <!-- Боковая панель фильтров -->
+    <aside id="filtersDrawer" class="su-drawer" aria-label="Фильтры" aria-hidden="true">
+      <header class="su-drawer__header">
+        <h3>Фильтры</h3>
+        <button class="su-icon-btn" id="closeFilters" aria-label="Закрыть">✕</button>
+      </header>
+      <div class="su-drawer__body">
+        <label class="su-field">
+          <span>Статус</span>
+          <select>
+            <option>Любой</option>
+            <option>Черновик</option>
+            <option>На ревью</option>
+            <option>Опубликовано</option>
+          </select>
+        </label>
+        <label class="su-field">
+          <span>Нотация</span>
+          <select>
+            <option>Любая</option>
+            <option>BPMN</option>
+            <option>DMN</option>
+            <option>EPC</option>
+          </select>
+        </label>
+        <label class="su-field">
+          <span>Владелец</span>
+          <input type="text" placeholder="Имя или e‑mail" />
+        </label>
+        <div class="su-drawer__footer">
+          <button class="su-button su-button--secondary" id="resetFilters">Сбросить</button>
+          <button class="su-button su-button--primary" id="applyFilters">Применить</button>
+        </div>
+      </div>
+    </aside>
+
+    <script src="app.js"></script>
+  </body>
+</html>
