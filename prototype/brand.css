@@ -1,0 +1,71 @@
+:root {
+  /* Цвета бренда (замените на реальные из брендбука Sila Union при интеграции) */
+  --su-primary-50: #eff4ff;
+  --su-primary-100: #dbe7ff;
+  --su-primary-200: #b7d0ff;
+  --su-primary-300: #8fb6ff;
+  --su-primary-400: #5c95ff;
+  --su-primary-500: #2e5bff;
+  --su-primary-600: #2347d0;
+  --su-primary-700: #1b39a6;
+  --su-primary-800: #162f85;
+  --su-primary-900: #112768;
+
+  --su-accent-500: #00c2a8;
+  --su-danger-500: #e5484d;
+  --su-warning-500: #ffa629;
+  --su-success-500: #1bbd66;
+
+  --su-bg: #0b0c10; /* подложка вокруг страницы в темной теме */
+  --su-surface: #101522;
+  --su-surface-2: #151b2b;
+  --su-surface-3: #1b2236;
+  --su-text: #e6eaf4;
+  --su-text-muted: #a6b0c3;
+  --su-border: #2b3450;
+  --su-overlay: rgba(7, 10, 20, 0.6);
+
+  /* Типографика */
+  --su-font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --su-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Размеры шрифтов */
+  --su-fs-12: 12px;
+  --su-fs-14: 14px;
+  --su-fs-16: 16px;
+  --su-fs-18: 18px;
+  --su-fs-20: 20px;
+  --su-fs-24: 24px;
+
+  /* Скругления */
+  --su-radius-4: 4px;
+  --su-radius-8: 8px;
+  --su-radius-12: 12px;
+
+  /* Сетка 8pt */
+  --su-space-4: 4px;
+  --su-space-8: 8px;
+  --su-space-12: 12px;
+  --su-space-16: 16px;
+  --su-space-20: 20px;
+  --su-space-24: 24px;
+  --su-space-32: 32px;
+
+  /* Тени */
+  --su-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --su-shadow-2: 0 4px 10px rgba(0, 0, 0, 0.3);
+  --su-shadow-3: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --su-bg: #f5f7fb;
+    --su-surface: #ffffff;
+    --su-surface-2: #f3f5fa;
+    --su-surface-3: #eef1f8;
+    --su-text: #0d1222;
+    --su-text-muted: #5c6a86;
+    --su-border: #d7dcec;
+    --su-overlay: rgba(14, 20, 35, 0.5);
+  }
+}
